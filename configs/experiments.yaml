@@ -1,0 +1,49 @@
+experiments:
+
+  - name: tinyllama_lora_r4_alpaca
+    model: TinyLlama/TinyLlama-1.1B-Chat-v1.0
+    method: lora
+    lora_rank: 4
+    lora_alpha: 16
+    lora_dropout: 0.05
+    target_modules: ["q_proj", "v_proj"]
+    dataset: alpaca
+    task: instruction
+    num_samples: 200
+    epochs: 1
+    batch_size: 4
+    learning_rate: 2e-4
+    max_length: 512
+    output_dir: models/tinyllama_lora_r4_alpaca
+
+  - name: tinyllama_lora_r8_alpaca
+    model: TinyLlama/TinyLlama-1.1B-Chat-v1.0
+    method: lora
+    lora_rank: 8
+    lora_alpha: 32
+    lora_dropout: 0.05
+    target_modules: ["q_proj", "v_proj"]
+    dataset: alpaca
+    task: instruction
+    num_samples: 200
+    epochs: 1
+    batch_size: 4
+    learning_rate: 2e-4
+    max_length: 512
+    output_dir: models/tinyllama_lora_r8_alpaca
+
+  - name: tinyllama_qlora_r8_alpaca
+    model: TinyLlama/TinyLlama-1.1B-Chat-v1.0
+    method: qlora
+    lora_rank: 8
+    lora_alpha: 32
+    lora_dropout: 0.05
+    target_modules: ["q_proj", "v_proj"]
+    dataset: alpaca
+    task: instruction
+    num_samples: 200
+    epochs: 1
+    batch_size: 4
+    learning_rate: 2e-4
+    max_length: 512
+    output_dir: models/tinyllama_qlora_r8_alpaca

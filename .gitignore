@@ -1,0 +1,37 @@
+# Virtual environment
+venv/
+
+# Python cache
+__pycache__/
+*.pyc
+*.pyo
+*.pyd
+.Python
+
+# Dataset cache
+.cache/
+~/.cache/huggingface/
+
+# Model weights (can be huge)
+models/*/model/
+models/*/*.bin
+models/*/*.safetensors
+*.pt
+*.pth
+
+# Results (optional — remove this line if you WANT to push results)
+results/
+
+# Environment variables
+.env
+*.env
+
+# VSCode
+.vscode/
+
+# Mac
+.DS_Store
+
+# Jupyter
+.ipynb_checkpoints/
+notebooks/.ipynb_checkpoints/
